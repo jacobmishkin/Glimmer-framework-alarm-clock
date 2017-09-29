@@ -12,45 +12,32 @@
 				</div>
 				<div class="alarm"></div>
 				<div class="digits">
-					<div class="dig-1">
-						<span class="d1"></span>
-						<span class="d2"></span>
-						<span class="d3"></span>
-						<span class="d4"></span>
-						<span class="d5"></span>
-						<span class="d6"></span>
-						<span class="d7"></span>
-					</div>
-					<div class="dig-0">
-						<span class="d1"></span>
-						<span class="d2"></span>
-						<span class="d3"></span>
-						<span class="d4"></span>
-						<span class="d5"></span>
-						<span class="d6"></span>
-						<span class="d7"></span>
-					</div>
+					{{#each time.hours key="@index" as |digit| }}
+						<div class="dig-{{digit}}">
+							<span class="d1"></span>
+							<span class="d2"></span>
+							<span class="d3"></span>
+							<span class="d4"></span>
+							<span class="d5"></span>
+							<span class="d6"></span>
+							<span class="d7"></span>
+						</div>
+					{{/each}}
 					<div class="dots"></div>
-					<div class="dig-4">
-						<span class="d1"></span>
-						<span class="d2"></span>
-						<span class="d3"></span>
-						<span class="d4"></span>
-						<span class="d5"></span>
-						<span class="d6"></span>
-						<span class="d7"></span>
-					</div>
-					<div class="dig-8">
-						<span class="d1"></span>
-						<span class="d2"></span>
-						<span class="d3"></span>
-						<span class="d4"></span>
-						<span class="d5"></span>
-						<span class="d6"></span>
-						<span class="d7"></span>
-					</div>
+					{{#each time.minutes key="@index" as |digit| }}
+						<div class="dig-{{digit}}">
+							<span class="d1"></span>
+							<span class="d2"></span>
+							<span class="d3"></span>
+							<span class="d4"></span>
+							<span class="d5"></span>
+							<span class="d6"></span>
+							<span class="d7"></span>
+						</div>
+					{{/each}}
 					<div class="dots"></div>
-					<div class="dig-0">
+				{{#each time.seconds key="@index" as |digit| }}
+					<div class="dig-{{digit}}">
 						<span class="d1"></span>
 						<span class="d2"></span>
 						<span class="d3"></span>
@@ -59,15 +46,8 @@
 						<span class="d6"></span>
 						<span class="d7"></span>
 					</div>
-					<div class="dig-3">
-						<span class="d1"></span>
-						<span class="d2"></span>
-						<span class="d3"></span>
-						<span class="d4"></span>
-						<span class="d5"></span>
-						<span class="d6"></span>
-						<span class="d7"></span>
-					</div>
+				{{/each}}
+
 				</div>
 			</div>
 		</div>
