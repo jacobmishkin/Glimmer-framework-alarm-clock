@@ -18,6 +18,6 @@ export default class AlarmClock extends Component {
 			timeObject[key] = [time[0], time[1]];
 		});
 		this.time = timeObject;
-
+		setTimeout(() => this.loadTime(), 1000);
 	}
 }
