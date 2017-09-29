@@ -2,13 +2,9 @@
 	<div id="clock" class="dark">
 			<div class="display">
 				<div class="weekdays">
-					<span class="">Mon</span>
-					<span class="">Tue</span>
-					<span class="">Wed</span>
-					<span class="">Thu</span>
-					<span class="">Fri</span>
-					<span class="active">Sat</span>
-					<span class="">Sun</span>
+					{{#each weekdays key="@index" as |weekday|}}
+						<span class={{weekday.cssClass}}>{{weekday.day}}</span>
+					{{/each}}
 				</div>
 				<div class="alarm"></div>
 				<div class="digits">
@@ -47,7 +43,6 @@
 						<span class="d7"></span>
 					</div>
 				{{/each}}
-
 				</div>
 			</div>
 		</div>
